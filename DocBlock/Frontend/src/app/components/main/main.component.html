@@ -1,0 +1,115 @@
+<div role="tablist" class="tabs tabs-lifted mt-6 ml-8 mr-8">
+    <input
+        type="radio"
+        name="my_tabs_2"
+        role="tab"
+        class="tab text-xl py-4 px-8 [--tab-border-color:oklch(var(--a))]"
+        aria-label="Store File"
+    />
+    <div
+        role="tabpanel"
+        class="tab-content bg-base-100 border-accent rounded-box p-6"
+    >
+        <h2 class="text-2xl font-bold mb-4">Upload a File</h2>
+        <form [formGroup]="storeFileForm" (ngSubmit)="onStoreFileSubmit()">
+            <div class="mb-4">
+                <label for="file-upload" class="block text-lg"
+                    >Choose a file to upload:</label
+                >
+                <input
+                    type="file"
+                    id="file-upload"
+                    formControlName="file"
+                    class="file-input file-input-bordered file-input-accent w-full max-w-xs"
+                    (change)="onFileToStoreChange($event)"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-accent"
+                [disabled]="!storeFileForm.valid || loading"
+            >
+                Upload
+            </button>
+        </form>
+
+        <div *ngIf="uploadStatus" class="mt-4">
+            <div *ngIf="uploadStatus.success" class="alert alert-success">
+                File uploaded successfully!
+            </div>
+            <div *ngIf="uploadStatus.error" class="alert alert-error">
+                {{ uploadStatus.message }}
+            </div>
+        </div>
+
+        <div *ngIf="loading" class="flex justify-center mt-4">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <input
+        type="radio"
+        name="my_tabs_2"
+        role="tab"
+        class="tab text-xl py-4 px-8 border-1 [--tab-border-color:oklch(var(--a))]"
+        aria-label="Verify File"
+        checked="checked"
+    />
+    <div
+        role="tabpanel"
+        class="tab-content bg-base-100 border-accent rounded-box p-6"
+    >
+        <h2 class="text-2xl font-bold mb-4">Verify a File</h2>
+        <form [formGroup]="verifyFileForm" (ngSubmit)="onVerifyFileSubmit()">
+            <div class="mb-4">
+                <label for="file-verify" class="block text-lg"
+                    >Choose a file to verify:</label
+                >
+                <input
+                    type="file"
+                    id="file-verify"
+                    formControlName="file"
+                    class="file-input file-input-bordered file-input-accent w-full max-w-xs"
+                    (change)="onFileToVerifyChange($event)"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-accent"
+                [disabled]="!verifyFileForm.valid || loading"
+            >
+                Verify
+            </button>
+        </form>
+
+        <!-- Success/Error Messages -->
+        <div *ngIf="verifyStatus" class="mt-4">
+            <div *ngIf="verifyStatus.success" class="alert alert-success">
+                File verification successful!
+            </div>
+            <div *ngIf="verifyStatus.error" class="alert alert-error">
+                {{ verifyStatus.message }}
+            </div>
+        </div>
+
+        <!-- Loader -->
+        <div *ngIf="loading" class="flex justify-center mt-4">
+            <div class="spinner"></div>
+        </div>
+    </div>
+
+    <!-- Tab 3: Timeline -->
+    <input
+        type="radio"
+        name="my_tabs_2"
+        role="tab"
+        class="tab text-xl py-4 px-8 [--tab-border-color:oklch(var(--a))] heading"
+        aria-label="Timeline"
+    />
+    <div
+        role="tabpanel"
+        class="tab-content bg-base-100 border-accent rounded-box p-6"
+    >
+        <app-timeline></app-timeline>
+    </div>
+</div>

@@ -1,0 +1,20 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Carriers</h1>
+        <div *ngIf="loading" class="text-center">
+            <div class="spinner"></div>
+            <p>Loading carriers...</p>
+        </div>
+        <ul *ngIf="!loading" class="list-disc pl-5">
+            <li *ngFor="let carrier of carriers" class="mb-2">
+                <span class="font-semibold">{{ carrier.name }}</span> -
+                {{ carrier.contactDetails }} - Rating: {{ carrier.rating }}
+            </li>
+        </ul>
+        <div class="mt-6">
+            <a routerLink="/carrier-registration" class="btn btn-primary"
+                >Register a Carrier</a
+            >
+        </div>
+    </div>
+</section>

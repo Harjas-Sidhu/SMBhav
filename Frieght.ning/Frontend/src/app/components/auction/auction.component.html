@@ -1,0 +1,58 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">
+            Start a New Auction
+        </h1>
+        <form (ngSubmit)="startAuction()">
+            <div class="mb-4">
+                <label for="auctionId" class="block">Auction ID</label>
+                <input
+                    type="text"
+                    id="auctionId"
+                    [(ngModel)]="auction.auctionId"
+                    name="auctionId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter auction ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="shipmentId" class="block">Shipment ID</label>
+                <input
+                    type="text"
+                    id="shipmentId"
+                    [(ngModel)]="auction.shipmentId"
+                    name="shipmentId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter shipment ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="startTime" class="block">Start Time</label>
+                <input
+                    type="datetime-local"
+                    id="startTime"
+                    [(ngModel)]="auction.startTime"
+                    name="startTime"
+                    required
+                    class="input input-bordered w-full"
+                />
+            </div>
+            <div class="mb-6">
+                <label for="endTime" class="block">End Time</label>
+                <input
+                    type="datetime-local"
+                    id="endTime"
+                    [(ngModel)]="auction.endTime"
+                    name="endTime"
+                    required
+                    class="input input-bordered w-full"
+                />
+            </div>
+            <button type="submit" class="btn btn-primary w-full">
+                Start Auction
+            </button>
+        </form>
+    </div>
+</section>

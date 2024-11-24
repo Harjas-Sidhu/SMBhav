@@ -1,0 +1,19 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Shipments</h1>
+        <div *ngIf="loading" class="text-center">
+            <div class="spinner"></div>
+            <p>Loading shipments...</p>
+        </div>
+        <ul *ngIf="!loading" class="list-disc pl-5">
+            <li *ngFor="let shipment of shipments" class="mb-2">
+                <span class="font-semibold">{{ shipment.shipmentId }}</span> -
+                {{ shipment.origin }} to {{ shipment.destination }} - Status:
+                {{ shipment.status }}
+            </li>
+        </ul>
+    </div>
+    <div class="mt-6">
+        <a routerLink="/shipment" class="btn btn-primary">Make a new Shipment</a>
+    </div>
+</section>

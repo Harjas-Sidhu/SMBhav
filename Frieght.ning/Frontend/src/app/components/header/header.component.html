@@ -1,0 +1,32 @@
+<header class="bg-primary text-white p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+        <div class="text-lg font-semibold">Carrier Negotiation App</div>
+        <nav class="space-x-4">
+            <a class="hover:bg-gray-700 p-2 rounded" routerLink="/home">Home</a>
+            <a class="hover:bg-gray-700 p-2 rounded" routerLink="/shipments"
+                >Shipments</a
+            >
+            <a class="hover:bg-gray-700 p-2 rounded" routerLink="/carriers"
+                >Carriers</a
+            >
+            <a class="hover:bg-gray-700 p-2 rounded" routerLink="/all-rates"
+                >Rates</a
+            >
+            <a class="hover:bg-gray-700 p-2 rounded" routerLink="/auctions"
+                >Auctions</a
+            >
+            <a
+                class="hover:bg-gray-700 p-2 rounded"
+                routerLink="/login"
+                *ngIf="!isLoggedIn"
+                >Login</a
+            >
+            <a
+                class="hover:bg-gray-700 p-2 rounded"
+                (click)="logout()"
+                *ngIf="isLoggedIn"
+                >Logout</a
+            >
+        </nav>
+    </div>
+</header>

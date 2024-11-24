@@ -1,0 +1,18 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-base-200">
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Upload a Document</h2>
+            <input
+                type="file"
+                class="file-input file-input-bordered w-full max-w-xs"
+                (change)="onFileSelected($event)"
+            />
+            <button class="btn btn-primary mt-4" (click)="onUpload()" [disabled]="isLoading">
+                Upload
+            </button>
+            <div *ngIf="isLoading" class="mt-4 text-blue-500">Uploading...</div>
+            <div *ngIf="isSuccess" class="mt-4 text-green-500">File uploaded successfully!</div>
+            <div *ngIf="isError" class="mt-4 text-red-500">File upload failed. Please try again.</div>
+        </div>
+    </div>
+</div>

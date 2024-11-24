@@ -1,0 +1,92 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">
+            Create a New Shipment
+        </h1>
+        <form (ngSubmit)="createShipment()">
+            <div class="mb-4">
+                <label for="shipmentId" class="block">Shipment ID</label>
+                <input
+                    type="text"
+                    id="shipmentId"
+                    [(ngModel)]="shipment.shipmentId"
+                    name="shipmentId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter shipment ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="origin" class="block">Origin</label>
+                <input
+                    type="text"
+                    id="origin"
+                    [(ngModel)]="shipment.origin"
+                    name="origin"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter origin"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="destination" class="block">Destination</label>
+                <input
+                    type="text"
+                    id="destination"
+                    [(ngModel)]="shipment.destination"
+                    name="destination"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter destination"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="weight" class="block">Weight</label>
+                <input
+                    type="number"
+                    id="weight"
+                    [(ngModel)]="shipment.weight"
+                    name="weight"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter weight"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="dimensions" class="block">Dimensions</label>
+                <input
+                    type="text"
+                    id="dimensions"
+                    [(ngModel)]="shipment.dimensions"
+                    name="dimensions"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter dimensions"
+                />
+            </div>
+            <div class="mb-6">
+                <label for="status" class="block">Status</label>
+                <input
+                    type="text"
+                    id="status"
+                    [(ngModel)]="shipment.status"
+                    name="status"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter status"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary w-full"
+                [disabled]="loading"
+            >
+                Create Shipment
+            </button>
+            <div *ngIf="loading" class="text-center mt-4">
+                <div class="spinner"></div>
+                <p>Creating shipment...</p>
+            </div>
+        </form>
+    </div>
+</section>

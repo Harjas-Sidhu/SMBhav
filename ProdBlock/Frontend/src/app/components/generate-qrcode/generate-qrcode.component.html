@@ -1,0 +1,70 @@
+<div class="flex items-center justify-between my-10 ml-64">
+    <!-- Left side: Form and Button -->
+    <div class="flex flex-col items-start w-1/2">
+        <h2 class="text-3xl font-bold mb-6 text-left text-accent">
+            Generate QR Code
+        </h2>
+
+        <div class="mb-3">
+            <input
+                type="text"
+                [(ngModel)]="packageId"
+                placeholder="Enter package ID"
+                class="input input-bordered input-primary w-80"
+            />
+        </div>
+
+        <button
+            (click)="generateQRCode()"
+            class="btn btn-primary w-80"
+            [disabled]="!packageId"
+        >
+            Generate QR Code
+        </button>
+
+        <div *ngIf="successMessage">
+            <div role="alert" class="alert alert-success mt-6">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 shrink-0 stroke-current"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+                <span>{{ successMessage }}</span>
+            </div>
+        </div>
+        <div *ngIf="errorMessage">
+            <div role="alert" class="alert alert-error mt-6">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 shrink-0 stroke-current"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+                    />
+                </svg>
+                <span>{{ errorMessage }}</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right side: QR Code -->
+    <div *ngIf="qrCodeUrl" class="my-4 mr-64 w-64 h-64">
+        <img [src]="qrCodeUrl" alt="QR Code" class="w-64 h-64 object-contain" />
+    </div>
+    <div *ngIf="!qrCodeUrl" class="my-4 mr-64 w-64 h-64">
+        <div class="skeleton h-64 w-64"></div>
+    </div>
+</div>

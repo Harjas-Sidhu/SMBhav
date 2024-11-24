@@ -1,0 +1,41 @@
+<div
+    class="flex flex-col items-center justify-center min-h-screen bg-base-200 my-8"
+>
+    <div class="card w-96 bg-base-100 shadow-xl">
+        <div class="card-body">
+            <h2 class="card-title">Search Documents</h2>
+            <input
+                type="text"
+                class="input input-bordered w-full max-w-xs"
+                [(ngModel)]="query"
+                placeholder="Enter search query"
+            />
+            <button
+                class="btn btn-primary mt-4"
+                (click)="onSearch()"
+                [disabled]="isLoading"
+            >
+                Search
+            </button>
+            <div *ngIf="isLoading" class="mt-4 text-blue-500">Searching...</div>
+            <div *ngIf="isError" class="mt-4 text-red-500">
+                Search failed. Please try again.
+            </div>
+        </div>
+    </div>
+    <div class="flex overflow-x-auto mt-8 w-full px-4">
+        <div
+            *ngFor="let result of results"
+            class="card bg-base-100 shadow-xl mx-2 min-w-[300px]"
+        >
+            <div class="card-body">
+                <h3 class="card-title">{{ result.metadata.title }}</h3>
+                <p>
+                    <strong>Similarity:</strong>
+                    {{ result.similarity | number : "1.2-2" }}
+                </p>
+                <p><strong>Summary:</strong> {{ result.summary }}</p>
+            </div>
+        </div>
+    </div>
+</div>

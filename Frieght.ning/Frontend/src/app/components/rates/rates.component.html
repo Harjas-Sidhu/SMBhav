@@ -1,0 +1,20 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Rates</h1>
+        <div *ngIf="loading" class="text-center">
+            <div class="spinner"></div>
+            <p>Loading carriers...</p>
+        </div>
+        <ul *ngIf="!loading" class="list-disc pl-5">
+            <li *ngFor="let rate of rates" class="mb-2">
+                <span class="font-semibold">{{ rate.carrierId }}</span> - ${{
+                    rate.price
+                }}
+                - Transit Time: {{ rate.transitTime }} days
+            </li>
+        </ul>
+    </div>
+    <div class="mt-6">
+        <a routerLink="/rate" class="btn btn-primary">Add a new rate</a>
+    </div>
+</section>

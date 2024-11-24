@@ -1,0 +1,90 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Rate Management</h1>
+        <form (ngSubmit)="addRate()">
+            <div class="mb-4">
+                <label for="rateId" class="block">Rate ID</label>
+                <input
+                    type="text"
+                    id="rateId"
+                    [(ngModel)]="rate.rateId"
+                    name="rateId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter rate ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="carrierId" class="block">Carrier ID</label>
+                <input
+                    type="text"
+                    id="carrierId"
+                    [(ngModel)]="rate.carrierId"
+                    name="carrierId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter carrier ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="price" class="block">Price</label>
+                <input
+                    type="number"
+                    id="price"
+                    [(ngModel)]="rate.price"
+                    name="price"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter price"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="transitTime" class="block">Transit Time</label>
+                <input
+                    type="text"
+                    id="transitTime"
+                    [(ngModel)]="rate.transitTime"
+                    name="transitTime"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter transit time"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="shipmentId" class="block">Shipment ID</label>
+                <input
+                    type="text"
+                    id="shipmentId"
+                    [(ngModel)]="rate.shipmentId"
+                    name="shipmentId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter shipment ID"
+                />
+            </div>
+            <div class="mb-6">
+                <label for="conditions" class="block">Conditions</label>
+                <input
+                    type="text"
+                    id="conditions"
+                    [(ngModel)]="rate.conditions"
+                    name="conditions"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter conditions"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary w-full"
+                [disabled]="loading"
+            >
+                Add Rate
+            </button>
+            <div *ngIf="loading" class="text-center mt-4">
+                <div class="spinner"></div>
+                <p>Adding rate...</p>
+            </div>
+        </form>
+    </div>
+</section>

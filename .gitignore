@@ -1,0 +1,84 @@
+# See https://docs.github.com/get-started/getting-started-with-git/ignoring-files for more about ignoring files.
+
+# Compiled output
+/dist
+/tmp
+/out-tsc
+/bazel-out
+
+# Node
+# /DocBlock/Backend/node_modules
+# /DocBlock/Blockchain/node_modules
+# /DocBlock/Frontend/node_modules
+# /Frieght.ning/Backend/node_modules
+# /Frieght.ning/Frontend/node_modules
+# /ProdBlock/Backend/node_modules
+# /ProdBlock/Frontend/node_modules
+# /ProdBlock/Blockchain/node_modules
+# /RegDoc/Backend/node_modules
+# /RegDoc/Frontend/node_modules
+# /DocBlock/Backend/.env
+# /DocBlock/Blockchain/.env
+# /DocBlock/Frontend/.env
+# /Frieght.ning/Backend/.env
+# /Frieght.ning/Frontend/.env
+# /ProdBlock/Backend/.env
+# /ProdBlock/Frontend/.env
+# /ProdBlock/Blockchain/.env
+# /RegDoc/Backend/.env
+# /RegDoc/Frontend/.env
+node_modules
+npm-debug.log
+yarn-error.log
+
+node_modules
+.env
+
+# Hardhat files
+/cache
+/artifacts
+
+# TypeChain files
+/typechain
+/typechain-types
+
+# solidity-coverage files
+/coverage
+/coverage.json
+
+# Hardhat Ignition default folder for deployments against a local node
+ignition/deployments/chain-31337
+
+
+# IDEs and editors
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+
+# Visual Studio Code
+.vscode/*
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
+
+# Miscellaneous
+/.angular/cache
+.sass-cache/
+/connect.lock
+/coverage
+.editorconfig
+/libpeerconnection.log
+testem.log
+/typings
+.angular/
+
+# System files
+.DS_Store
+Thumbs.db

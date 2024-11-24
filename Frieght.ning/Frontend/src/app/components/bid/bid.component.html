@@ -1,0 +1,46 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Place a Bid</h1>
+        <form (ngSubmit)="placeBid()">
+            <div class="mb-4">
+                <label for="auctionId" class="block">Auction ID</label>
+                <input
+                    type="text"
+                    id="auctionId"
+                    [(ngModel)]="bid.auctionId"
+                    name="auctionId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter auction ID"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="carrierId" class="block">Carrier ID</label>
+                <input
+                    type="text"
+                    id="carrierId"
+                    [(ngModel)]="bid.carrierId"
+                    name="carrierId"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter carrier ID"
+                />
+            </div>
+            <div class="mb-6">
+                <label for="bidAmount" class="block">Bid Amount</label>
+                <input
+                    type="number"
+                    id="bidAmount"
+                    [(ngModel)]="bid.bidAmount"
+                    name="bidAmount"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter bid amount"
+                />
+            </div>
+            <button type="submit" class="btn btn-primary w-full">
+                Place Bid
+            </button>
+        </form>
+    </div>
+</section>

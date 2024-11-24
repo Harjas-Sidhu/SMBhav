@@ -1,0 +1,21 @@
+<section class="p-8">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-semibold text-accent mb-4">Auctions</h1>
+        <div *ngIf="loading" class="text-center">
+            <div class="spinner"></div>
+            <p>Loading auctions...</p>
+        </div>
+        <ul *ngIf="!loading" class="list-disc pl-5">
+            <li *ngFor="let auction of auctions" class="mb-2">
+                <span class="font-semibold"
+                    >Auction ID: {{ auction.auctionId }}</span
+                >
+                - Shipment ID: {{ auction.shipmentId }} - Status:
+                {{ auction.status }}
+            </li>
+        </ul>
+    </div>
+    <div class="mt-6">
+        <a routerLink="/auction" class="btn btn-primary">Start a New Auction</a>
+    </div>
+</section>

@@ -1,0 +1,83 @@
+<section class="flex items-center justify-center h-screen">
+    <div class="p-8 rounded-lg shadow-lg max-w-md w-full">
+        <h2 class="text-2xl font-semibold text-accent mb-4">Register</h2>
+        <form (ngSubmit)="register()">
+            <div class="mb-4">
+                <label for="email" class="block">Email</label>
+                <input
+                    type="email"
+                    id="email"
+                    [(ngModel)]="user.email"
+                    name="email"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter your email"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="password" class="block">Password</label>
+                <input
+                    type="password"
+                    id="password"
+                    [(ngModel)]="user.password"
+                    name="password"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter your password"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="role" class="block">Role</label>
+                <input
+                    type="text"
+                    id="role"
+                    [(ngModel)]="user.role"
+                    name="role"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter your role"
+                />
+            </div>
+            <div class="mb-4">
+                <label for="name" class="block">Name</label>
+                <input
+                    type="text"
+                    id="name"
+                    [(ngModel)]="user.name"
+                    name="name"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter your name"
+                />
+            </div>
+            <div class="mb-6">
+                <label for="contactDetails" class="block"
+                    >Contact Details</label
+                >
+                <input
+                    type="text"
+                    id="contactDetails"
+                    [(ngModel)]="user.contactDetails"
+                    name="contactDetails"
+                    required
+                    class="input input-bordered w-full"
+                    placeholder="Enter your contact details"
+                />
+            </div>
+            <button
+                type="submit"
+                class="btn btn-primary w-full"
+                [disabled]="loading"
+            >
+                Register
+            </button>
+            <div *ngIf="loading" class="text-center mt-4">
+                <div class="spinner"></div>
+                <p>Registering...</p>
+            </div>
+        </form>
+        <div class="mt-4 text-center">
+            <a routerLink="/login" class="text-accent">Login</a>
+        </div>
+    </div>
+</section>

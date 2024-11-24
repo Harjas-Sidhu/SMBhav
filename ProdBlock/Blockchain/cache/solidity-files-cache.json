@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/home/harjas/Desktop/SMBhav/ProdBlock/Blockchain/contracts/PackageContract.sol": {
+      "lastModificationDate": 1732284711126,
+      "contentHash": "c384efffaecf8f9ef9006ab245b26d65",
+      "sourceName": "contracts/PackageContract.sol",
+      "solcConfig": {
+        "version": "0.8.17",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "PackageTracking"
+      ]
+    }
+  }
+}
