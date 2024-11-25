@@ -1,7 +1,7 @@
-# DockuDec Blockchain
+# HashHarbour Blockchain
 
 ## Description
-DockuDec Blockchain is a module designed to leverage blockchain technology for the purpose of verifying and securing document transactions. This system is implemented using Solidity, Hardhat, and several supporting libraries.
+HashHarbour Blockchain is a module designed to leverage blockchain technology for the purpose of verifying and securing document transactions. This system is implemented using Solidity, Hardhat, and several supporting libraries.
 
 ## Installation
 To set up the DockuDec Blockchain project, please follow these instructions:
@@ -10,7 +10,7 @@ To set up the DockuDec Blockchain project, please follow these instructions:
    ```bash
    git clone git@github.com:Harjas-Sidhu/SMBhav.git
 
-   cd SMBhav/docku-deck/blockchain
+   cd SMBhav/HashHarbour/Blockchain
 
    ```
 
