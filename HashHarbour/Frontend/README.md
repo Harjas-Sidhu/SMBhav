@@ -15,7 +15,7 @@ git clone git@github.com:Harjas-Sidhu/SMBhav.git
 After cloning the repository, navigate into the project folder:
 
 ```bash 
-cd SMBhav/docku-deck/frontend
+cd SMBhav/HashHarbour/Frontend
 ```
 3. Install Dependencies
 Install all the necessary dependencies listed in the package.json file using npm (Node Package Manager). This will fetch all the libraries and packages required for the Angular app.
