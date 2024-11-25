@@ -10,8 +10,9 @@ To get started with the DockuDec Backend, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone /home/rakshit/repos/SMBhav/DockuDec/Backend
-   cd Backend
+   git clone git@github.com:Harjas-Sidhu/SMBhav.git
+
+   cd SMBhav/docku-deck/Backend
    ```
 
 2. Install the necessary dependencies using npm:
