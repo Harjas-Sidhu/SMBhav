@@ -1,45 +1,65 @@
-# Sample Hardhat Project
+# DockuDec Blockchain
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
+## Description
+DockuDec Blockchain is a module designed to leverage blockchain technology for the purpose of verifying and securing document transactions. This system is implemented using Solidity, Hardhat, and several supporting libraries.
 
-## Getting Started
+## Installation
+To set up the DockuDec Blockchain project, please follow these instructions:
 
-1. **Clone the Repository:**
-   ```shell
-   git clone <repository-url>
+1. Clone the repository:
+   ```bash
+   git clone git@github.com:Harjas-Sidhu/SMBhav.git
+
+   cd SMBhav/docku-deck/blockchain
+
    ```
 
-2. **Navigate to the Project Directory:**
-   ```shell
-   cd <repository-directory>/Blockchain
-   ```
-
-3. **Install Dependencies:**
-   ```shell
+2. Install the necessary dependencies using npm:
+   ```bash
    npm install
    ```
 
-4. **Set up environment variables:**
-   - Create a `.env` file in the root directory.
-   - Add the following variables to the `.env` file:
-     ```plaintext
-     PRIVATE_KEY=<your-private-key>
-     POLYGON_MUMBAI_RPC_URL=<testnet-polygon-rpc>
-     POLYGONSCAN_API_KEY=<polyscan-api>
-     ```
-   - You can get these values from your Ethereum wallet provider and Infura account.
+3. Set up environment variables:
+   Create a `.env` file in the root directory and add the necessary environment variables as specified in `.env.example`.
 
-5. **Run the Local Ethereum Network:**
-   ```shell
-   npx hardhat node
-   ```
+## Usage
+### Compiling the Smart Contracts
+To compile the smart contracts, run:
+```bash
+npx hardhat compile
+```
 
-Try running some of the following tasks:
+### Deployment
+To deploy the smart contracts to the blockchain, run:
+```bash
+npx hardhat run scripts/DocumentRegistry.js --network <network-name>
+```
+Replace `<network-name>` with the appropriate network, such as `localhost` for local deployment or `mumbai` for testnet deployment.
 
-```shell
-npx hardhat help
+### Testing
+To run the tests for the smart contracts, use:
+```bash
 npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
+```
+
+### Interacting with Contracts
+You can interact with the deployed contracts using the Hardhat console:
+```bash
+npx hardhat console --network <network-name>
+```
+Replace `<network-name>` with the appropriate network, such as `localhost` for local deployment or `mumbai` for testnet deployment.
+
+## Available Scripts
+- `compile`: Compiles the smart contracts.
+- `deploy`: Deploys the smart contracts.
+- `test`: Runs the contract tests.
+- `clean`: Cleans the cache and artifact folders.
+
+### Commit Changes (Optional)
+If you make any changes and want to push them to the repository, follow these steps:
+bash
+```bash 
+git add .
+git commit -m "Your commit message"
+git push origin main
 ```
