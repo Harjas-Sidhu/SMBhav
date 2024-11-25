@@ -1,4 +1,5 @@
-This platform helps small and medium-sized businesses (SMBs) simplify their export processes. It includes four main organs:
+# Safari - The Whole Trip
+Our solution enhances export operations by improving document management, compliance, cost optimization, and shipment tracking with advanced technologies. It helps small and medium-sized businesses (SMBs) streamline their export processes through four key components:
 
 1. **DockuDeck**: A document management system that handles all necessary trade paperwork, including compliance, duties, and customs. It collects relevant documents, analyzes them with Apache Tika, stores them in a database with Elasticsearch, and provides summaries using natural language processing.
 
