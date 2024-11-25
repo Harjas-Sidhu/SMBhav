@@ -10,7 +10,7 @@ This platform helps small and medium-sized businesses (SMBs) simplify their expo
 
 
 
-##Contributing
+## Contributing
 Contributions are welcome! Please follow these steps:
 
 Visit the directory of each organ
