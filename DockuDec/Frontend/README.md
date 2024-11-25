@@ -25,15 +25,7 @@ Install all the necessary dependencies listed in the package.json file using npm
 npm install 
 ```
 
-4. Set Up Environment Variables (Optional)
-If your project requires API keys, database credentials, or any other sensitive information, create an .env file in the root directory and add those details. For example:
-```
-API_KEY=your-api-key
-DB_URI=your-database-uri
-``` 
-If your project uses different environments (like development, staging, production), ensure the necessary environment-specific configurations are in place. Angular uses the ```src/environments``` folder for this. 
-
-5. Start the Development Server
+4. Start the Development Server
 Run the following command to start the Angular development server:
 ```bash
 ng serve --open 
@@ -43,10 +35,10 @@ Compile the Angular application.
 Launch the development server at http://localhost:4200/ in your default web browser.
 The --open flag automatically opens the browser window.
 
-6. Verify the Application is Running
+5. Verify the Application is Running
 After running the development server, go to ``` http://localhost:4200/ ``` in your browser to verify that DockuDeck is up and running. You should see the application’s homepage or the default page set up in Angular.
 
-7. Optional: Build for Production
+6. Optional: Build for Production
 If you're ready to build the application for production, use the ng build --prod command:
 
 ```bash 
@@ -54,7 +46,7 @@ ng build --prod
  ```
 This will create a dist/ folder with all the production-ready files that can be deployed to a web server.
 
-8. Commit Changes (Optional)
+7. Commit Changes (Optional)
 If you make any changes and want to push them to the repository, follow these steps:
 bash
 ```bash 
